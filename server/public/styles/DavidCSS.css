@@ -1,0 +1,241 @@
+@charset "UTF-8";
+/* Aquí irán los estilos que añada David*/
+body {
+  font-family: Arial;
+  line-height: 1.6;
+  background-repeat: no-repeat;
+  background-image: url("../images/back.jpeg");
+}
+
+/* ----NAV---- */
+nav {
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: row;
+  position: sticky;
+  top: 0;
+  padding-left: 1em;
+  background-color: rgba(0, 195, 255, 0.267);
+  z-index: 70;
+  background-size: cover;
+  background-image: url("../images/nav.png");
+}
+@media (max-width: 1280px) {
+  nav {
+    flex-direction: column;
+  }
+}
+@media (max-width: 700px) {
+  nav {
+    font-size: 1em;
+  }
+}
+nav ul {
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: row;
+  margin: 0 auto;
+}
+nav li {
+  font-style: italic;
+  font-size: 1.4em;
+  color: white;
+  text-shadow: 2px 2px 0.1em black, 3px 5px 0.5em black, -2px -2px 0.4em black;
+  display: block;
+  margin-left: 45px;
+  padding-top: 2.5em;
+  list-style: none;
+  position: relative;
+}
+
+a:hover {
+  text-decoration: none;
+}
+
+.logo img {
+  padding: 0.5em 0 0.5em;
+  display: block;
+  text-shadow: 2px 2px 0.1em white, 3px 5px 0.5em white, -2px -2px 0.4em white;
+  height: 5em;
+}
+.logo p {
+  margin: 0;
+  padding-bottom: 0.5em;
+  font-size: 1.5em;
+  line-height: 1;
+  font-weight: bold;
+  color: #141939;
+  text-shadow: 2px 2px 0.1em white, 3px 5px 0.5em white, -2px -2px 0.4em white;
+  text-align: center;
+}
+
+.socialMedia {
+  padding-top: 3em;
+  padding-right: 1.8em;
+}
+.socialMedia img {
+  width: 2em;
+}
+
+/* HEADER */
+header {
+  color: white;
+  padding: 3em 4em 6em 4em;
+}
+header h1 {
+  margin-left: 30%;
+  font-weight: bold;
+  font-size: 4em;
+}
+header p {
+  margin-left: 30%;
+  margin-bottom: 1em;
+  font-size: 2.5em;
+}
+header button {
+  all: unset;
+  display: block;
+  color: black;
+  background-color: #fef200;
+  font-style: italic;
+  text-align: center;
+  font-size: 1.5em;
+  width: 20%;
+  margin-left: 43%;
+  padding: 0.4em 0.1em 0.4em 0.1em;
+}
+
+/* CONTACT */
+.contact {
+  display: flex;
+  flex-direction: row;
+  background-color: #fcfcfc;
+  padding: 4em 0 6em 1.4em;
+}
+@media (max-width: 1280px) {
+  .contact .contact {
+    padding: 5em;
+    flex-direction: column;
+  }
+}
+.contact img {
+  margin-left: 9.5em;
+  display: block;
+}
+.contact button {
+  all: unset;
+  font-style: italic;
+  text-align: center;
+  color: black;
+  background-color: #fef200;
+  font-size: 1.3em;
+  width: 25%;
+  padding: 0.7em 0.1em 0.7em 0.5em;
+}
+
+.barraAzul::before {
+  content: "";
+  display: block;
+  height: 5px;
+  width: 0%;
+  background-color: #73adfe;
+  transition: all ease-in-out 500ms;
+}
+.barraAzul::before:hover::before {
+  width: 83%;
+}
+
+.contactForm {
+  padding: 0 0 0 4em;
+  flex-wrap: wrap;
+}
+.contactForm input {
+  font-size: 0.8em;
+  margin: 0.6em;
+  width: 40%;
+  padding: 0.6em;
+}
+.contactForm textarea {
+  font-size: 0.8em;
+  margin: 0.6em;
+  padding: 0.8em;
+  width: 83%;
+}
+
+.fieldsWarning {
+  font-size: 0.7em;
+}
+
+/*------- Footer---------*/
+footer {
+  padding: 1.5em;
+  font-size: 1.4em;
+  color: white;
+  background-color: #141939;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  margin: 0 auto;
+}
+@media (max-width: 1280px) {
+  footer {
+    padding: 5em;
+    flex-direction: column;
+  }
+}
+footer input {
+  font-size: 0.6em;
+  padding: 0.5em;
+  width: 80%;
+}
+footer button {
+  all: unset;
+  color: black;
+  text-align: center;
+  background-color: #fef200;
+  font-size: 1.3em;
+  width: 53%;
+  padding: 0.4em 0.1em 0.4em 0.1em;
+}
+footer .horario {
+  padding-top: 2em;
+  font-size: 0.8em;
+}
+footer .ayuda,
+footer .informacion,
+footer .suscribete {
+  display: flex;
+  flex-direction: column;
+  margin: 0 auto;
+}
+@media (max-width: 1280px) {
+  footer .ayuda,
+footer .informacion,
+footer .suscribete {
+    display: flex;
+    margin: 0 auto;
+    margin-top: 2em;
+  }
+}
+footer .ayuda {
+  padding-left: 9.5em;
+}
+@media (max-width: 1280px) {
+  footer .ayuda {
+    padding-left: 0;
+  }
+}
+footer p {
+  padding-left: 0.8em;
+}
+
+.copyright {
+  border: solid black 0.1em;
+  padding: 1em;
+  text-align: center;
+  color: white;
+  background-color: #141939;
+  margin: 0 auto;
+}
+
+/*# sourceMappingURL=DavidCSS.css.map */

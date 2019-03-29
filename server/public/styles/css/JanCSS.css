@@ -1,0 +1,115 @@
+
+/* AquÌ irán los estilos que aÒada Jan*/
+
+
+.destinos {
+    text-align: center;
+    font-size: 1.2em;
+    font-weight: bold;
+    background-color: #fff;
+    padding: 3em 2em 1em 7em;
+    color: black;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    align-content: center;
+}
+.destinos div{
+    padding: 2em 0.5em 1em 0.5em;
+}
+
+.a{
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-image: url('../images/beijing.JPG');
+  height: 18em;
+  width: 20em;
+  position: relative;
+  z-index: 1;
+}
+.a p, .b p, .c p, .d p, .e p, .f p {
+    font-size: 1.2em;
+    text-align: left;
+    padding: 0.5em 0 0.5em 0.5em;
+    top:-1.65em;
+    left: -0.42em;;
+    margin: 0 auto;
+    position: relative;
+    color :white;
+    background-color: #141939;
+    z-index: 2;
+}
+.a h3, .b h3, .c h3, .d h3, .e h3, .f h3{
+    font-size: 2em;
+    font-weight: bold;
+    top:-2.55em;
+    right: -3.1em;
+    width: 40%;
+    margin: 0 auto;
+    position: relative;
+    color:black;
+    padding: 0.5em;
+    background-color: #fef200;
+    z-index: 3;
+}
+
+.b {
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-image: url('../images/buenos_aires.JPG');
+    height: 18em;
+    width: 20em;
+    position: relative;
+    z-index: 1;
+  }
+
+.c {
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-image: url('../images/ciudad_mexico.JPG');
+    height: 18em;
+    width: 20em;
+    position: relative;
+    z-index: 1;
+}
+
+  .d{
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-image: url('../images/madrid.JPG');
+    height: 18em;
+    width: 20em;
+    position: relative;
+    z-index: 1;
+  }
+
+  .e{
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-image: url('../images/new_york.JPG');
+    height: 18em;
+    width: 20em;
+    position: relative;
+    z-index: 1;
+  }
+  .f{
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-image: url('../images/tokyo.JPG');
+    height: 18em;
+    width: 20em;
+    position: relative;
+    z-index: 1;
+  }
+
+.imagenes_destinos {
+    display: block;
+    position: relative;
+    width: 20em; height: 18em;
+    z-index: 0;
+}
+
+.texto_destinos {
+    z-index: +2;
+    font-size: 1.4em;
+}
