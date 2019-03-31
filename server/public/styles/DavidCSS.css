@@ -1,173 +1,3 @@
-@charset "UTF-8";
-.micro {
-  background-size: cover;
-  background-image: url("/images/travel_3.jpg");
-  /*height: 500px;*/
-  padding: 50px;
-}
-
-.quien {
-  background-color: whitesmoke;
-  padding: 30px;
-  text-align: justify;
-  width: 40%;
-  /*height: 400px;*/
-}
-
-.quien hr {
-  background-color: gold;
-  height: 5px;
-  width: 50%;
-  float: left;
-}
-
-.quien h1 {
-  font-weight: bold;
-  font-style: italic;
-  font-size: 2em;
-  color: darkblue;
-}
-
-.quien p {
-  color: darkblue;
-  padding: 2em;
-}
-
-.butto {
-  width: 100%;
-  text-align: center;
-}
-
-.butto button {
-  font-weight: bold;
-  background-color: darkblue;
-  color: yellow;
-  font-weight: bold;
-  padding: 10px;
-}
-
-@media (max-width: 1280px) {
-  .quien {
-    width: 90%;
-  }
-}
-/* AquÌ irán los estilos que aÒada Jan*/
-.destinos {
-  text-align: center;
-  font-size: 1.2em;
-  font-weight: bold;
-  background-color: #fff;
-  padding: 3em 2em 1em 7em;
-  color: black;
-  display: flex;
-  flex-direction: row;
-  flex-wrap: wrap;
-  align-content: center;
-}
-
-.destinos div {
-  padding: 2em 0.5em 1em 0.5em;
-}
-
-.a {
-  background-size: cover;
-  background-repeat: no-repeat;
-  height: 18em;
-  width: 20em;
-  position: relative;
-  z-index: 1;
-}
-
-.a p, .b p, .c p, .d p, .e p, .f p {
-  font-size: 1.2em;
-  text-align: left;
-  padding: 0.5em 0 0.5em 0.5em;
-  top: -1.65em;
-  left: -0.42em;
-  margin: 0 auto;
-  position: relative;
-  color: white;
-  background-color: #141939;
-  z-index: 2;
-}
-
-.a h3, .b h3, .c h3, .d h3, .e h3, .f h3 {
-  font-size: 2em;
-  font-weight: bold;
-  top: -2.55em;
-  right: -3.1em;
-  width: 40%;
-  margin: 0 auto;
-  position: relative;
-  color: black;
-  padding: 0.5em;
-  background-color: #fef200;
-  z-index: 3;
-}
-
-.b {
-  background-size: cover;
-  background-repeat: no-repeat;
-  background-image: url("/images/buenos_aires.JPG");
-  height: 18em;
-  width: 20em;
-  position: relative;
-  z-index: 1;
-}
-
-.c {
-  background-size: cover;
-  background-repeat: no-repeat;
-  background-image: url("/images/ciudad_mexico.JPG");
-  height: 18em;
-  width: 20em;
-  position: relative;
-  z-index: 1;
-}
-
-.d {
-  background-size: cover;
-  background-repeat: no-repeat;
-  background-image: url("/images/madrid.JPG");
-  height: 18em;
-  width: 20em;
-  position: relative;
-  z-index: 1;
-}
-
-.e {
-  background-size: cover;
-  background-repeat: no-repeat;
-  background-image: url("/images/new_york.JPG");
-  height: 18em;
-  width: 20em;
-  position: relative;
-  z-index: 1;
-}
-
-.f {
-  background-size: cover;
-  background-repeat: no-repeat;
-  background-image: url("/images/tokyo.JPG");
-  height: 18em;
-  width: 20em;
-  position: relative;
-  z-index: 1;
-}
-
-.imagenes_destinos {
-  display: block;
-  position: relative;
-  width: 20em;
-  height: 18em;
-  z-index: 0;
-}
-
-.texto_destinos {
-  z-index: 2;
-  font-size: 1.4em;
-}
-
 body {
   font-family: Arial;
   line-height: 1.6;
@@ -180,23 +10,14 @@ nav {
   display: flex;
   flex-wrap: wrap;
   flex-direction: row;
+  justify-content: space-between;
   position: sticky;
   top: 0;
-  padding-left: 1em;
+  padding: 1em;
   background-color: rgba(0, 195, 255, 0.267);
   z-index: 70;
   background-size: cover;
   background-image: url("/images/nav.png");
-}
-@media (max-width: 1280px) {
-  nav {
-    flex-direction: column;
-  }
-}
-@media (max-width: 700px) {
-  nav {
-    font-size: 1em;
-  }
 }
 nav ul {
   display: flex;
@@ -204,13 +25,20 @@ nav ul {
   flex-direction: row;
   margin: 0 auto;
 }
-nav li {
-  font-style: italic;
-  font-size: 1.4em;
+@media (max-width: 768px) {
+  nav ul {
+    display: none;
+  }
+}
+nav a {
   color: white;
+  font-style: italic;
+}
+nav li {
+  font-size: 1.4em;
   text-shadow: 2px 2px 0.1em black, 3px 5px 0.5em black, -2px -2px 0.4em black;
   display: block;
-  margin-left: 45px;
+  margin-left: 3em;
   padding-top: 2.5em;
   list-style: none;
   position: relative;
@@ -237,12 +65,26 @@ a:hover {
   text-align: center;
 }
 
+.bg-dark {
+  background-color: rgba(0, 195, 255, 0.11) !important;
+}
+@media (min-width: 768px) {
+  .bg-dark {
+    display: none;
+  }
+}
+
 .socialMedia {
   padding-top: 3em;
   padding-right: 1.8em;
 }
 .socialMedia img {
   width: 2em;
+}
+@media (max-width: 768px) {
+  .socialMedia {
+    display: none;
+  }
 }
 
 /* HEADER */
@@ -273,6 +115,116 @@ header button {
   padding: 0.4em 0.1em 0.4em 0.1em;
 }
 
+.micro {
+  background-size: cover;
+  background-image: url("/images/travel_3.jpg");
+  padding: 50px;
+}
+
+.quien {
+  background-color: whitesmoke;
+  padding: 30px;
+  text-align: justify;
+  width: 40%;
+}
+.quien hr {
+  background-color: gold;
+  height: 5px;
+  width: 50%;
+  float: left;
+}
+.quien h1 {
+  font-weight: bold;
+  font-style: italic;
+  font-size: 2em;
+  color: darkblue;
+}
+.quien p {
+  color: darkblue;
+  padding: 2em;
+}
+
+.butto {
+  width: 100%;
+  text-align: center;
+}
+.butto button {
+  font-weight: bold;
+  background-color: darkblue;
+  color: yellow;
+  font-weight: bold;
+  padding: 10px;
+}
+
+@media (max-width: 768px) {
+  .quien {
+    width: 90%;
+  }
+}
+.destinos {
+  text-align: center;
+  font-size: 1.2em;
+  font-weight: bold;
+  background-color: #fff;
+  padding: 3em 2em 1em 7em;
+  color: black;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  align-content: center;
+}
+
+.destinos div {
+  padding: 2em 0.5em 1em 0.5em;
+}
+
+.a {
+  background-size: cover;
+  background-repeat: no-repeat;
+  height: 18em;
+  width: 20em;
+  position: relative;
+  z-index: 1;
+}
+.a p {
+  font-size: 1.2em;
+  text-align: left;
+  padding: 0.5em 0 0.5em 0.5em;
+  top: -1.65em;
+  left: -0.42em;
+  margin: 0 auto;
+  position: relative;
+  color: white;
+  background-color: #141939;
+  z-index: 2;
+}
+.a h3 {
+  font-size: 2em;
+  font-weight: bold;
+  top: -2.55em;
+  right: -3.1em;
+  width: 40%;
+  margin: 0 auto;
+  position: relative;
+  color: black;
+  padding: 0.5em;
+  background-color: #fef200;
+  z-index: 3;
+}
+
+.imagenes_destinos {
+  display: block;
+  position: relative;
+  width: 20em;
+  height: 18em;
+  z-index: 0;
+}
+
+.texto_destinos {
+  z-index: 2;
+  font-size: 1.4em;
+}
+
 /* CONTACT */
 .contact {
   display: flex;
@@ -280,7 +232,7 @@ header button {
   background-color: #fcfcfc;
   padding: 4em 0 6em 1.4em;
 }
-@media (max-width: 1280px) {
+@media (max-width: 768px) {
   .contact .contact {
     padding: 5em;
     flex-direction: column;
@@ -345,7 +297,7 @@ footer {
   flex-wrap: wrap;
   margin: 0 auto;
 }
-@media (max-width: 1280px) {
+@media (max-width: 768px) {
   footer {
     padding: 5em;
     flex-direction: column;
@@ -376,7 +328,7 @@ footer .suscribete {
   flex-direction: column;
   margin: 0 auto;
 }
-@media (max-width: 1280px) {
+@media (max-width: 768px) {
   footer .ayuda,
 footer .informacion,
 footer .suscribete {
@@ -388,7 +340,7 @@ footer .suscribete {
 footer .ayuda {
   padding-left: 9.5em;
 }
-@media (max-width: 1280px) {
+@media (max-width: 768px) {
   footer .ayuda {
     padding-left: 0;
   }
