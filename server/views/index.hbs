@@ -1,4 +1,3 @@
-
 <header>
     <h1>Viaja!</h1>
     <p>Descubre lugares maravillosos!</p>
@@ -7,16 +6,17 @@
 
 <section class="destinos" id="destinos">
     <!-- JAN se encarga de esta sección (destinos)-->
-    
-        {{#each destinations}}
+
+    {{#each destinations}}
     <div>
-        <div class="a" style="background-image: url({{imagePath}});">
+        <div class="destination" style="background-image: url({{imagePath}});">
             <p>Save {{discount}}$ pay only</p>
             <h3>{{price}}$</h3>
         </div><br> {{destination}}
-         {{log destination}}
     </div>
-        {{/each}}
+    {{/each}}
+
+</section>
 <section>
     <!-- Jose A Lopez se encarga de esta sección (Quienes somos)-->
     <div class='micro' id="quienesSomos">
@@ -27,7 +27,7 @@
                 que deciden hacer de su pasión por conocer el mundo un modo de vida. Desde nuestros inicios hemos
                 diseñado mas de 500 viajes organizados a diferentes destinos de Europa, Norteamérica y asia nuestros
                 objetivo ahora es ir ampliando horizontes poco a poco. </p>
-            <div class='butto'><button>DISCUBRIR</button><br></div>
+            <div class='butto'><button>DESCUBRIR</button><br></div>
         </div>
     </div>
 </section>
