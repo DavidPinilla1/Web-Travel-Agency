@@ -7,45 +7,16 @@
 
 <section class="destinos" id="destinos">
     <!-- JAN se encarga de esta sección (destinos)-->
+    
+        {{#each destinations}}
     <div>
-        <div class="a">
-            <p>Save 90$ pay only</p>
-            <h3>795$</h3>
-        </div><br> Beijing
+        <div class="a" style="background-image: url({{imagePath}});">
+            <p>Save {{discount}}$ pay only</p>
+            <h3>{{price}}$</h3>
+        </div><br> {{destination}}
+         {{log destination}}
     </div>
-    <div>
-        <div class="b">
-            <p>Save 87$ pay only</p>
-            <h3>695$</h3>
-        </div><br> Buenos Aires
-    </div>
-    <div>
-        <div class="c">
-            <p>Save 99$ pay only</p>
-            <h3>755$</h3>
-        </div><br> Ciudad de Mejico
-    </div>
-    <br></br>
-    <div>
-        <div class="d">
-            <p>Save 200$ pay only</p>
-            <h3>102$</h3>
-        </div><br>Madrid
-    </div>
-    <div>
-        <div class="e">
-            <p>Save 300$ pay only</p>
-            <h3>999$</h3>
-        </div><br> New York
-    </div>
-    <div>
-        <div class="f">
-            <p>Save 375$ pay only</p>
-            <h3>999$</h3>
-        </div><br> Tokyo
-    </div>
-</section>
-<!--------------------------------------------------------------------------->
+        {{/each}}
 <section>
     <!-- Jose A Lopez se encarga de esta sección (Quienes somos)-->
     <div class='micro' id="quienesSomos">

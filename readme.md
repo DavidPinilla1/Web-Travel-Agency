@@ -6,7 +6,7 @@ Web travel agency project based on Geekshubs' Bootcamp tasks
 - [ ] En el apartado viajes se convertira en una vista de tipo carrousel donde el usuario pulsando sobre las flechas podrá cambiar de un viaje a otro, no tendrá puesta en marcha automático sino la iteracción se producirá cuando el usuario pulse alguna de las flechas laterales. Además estás flechas deben verse bién y tener un tamaño suficiente para que sea factible su utilización.
 - [ ] En el apartado quienes somos desaparecerá la imagen de fondo y apareerá sólo un color con la descripción.
 - [ ] El apartado de localización no es visible en mobile.
-- [ ] El footer debera ser igual al de la imagen.
+- [x] El footer debera ser igual al de la imagen.
 
 ## Author
 * **David Pinilla** - *Self-taught Full Stack developer and Student of GeeksHubsAcademy* 

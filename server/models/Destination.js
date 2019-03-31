@@ -3,7 +3,7 @@ const DestinationSchema = new mongoose.Schema({
     destination: {
         type: String,
         required: true,
-        maxlength: 50,
+        maxlength: 40,
     },
     imagePath:String,
     price: {
