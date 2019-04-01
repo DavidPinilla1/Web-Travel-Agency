@@ -3,64 +3,85 @@
     <p>Descubre lugares maravillosos!</p>
     <button>Ver destinos</button>
 </header>
-
-<section class="destinos" id="destinos">
-    <!-- JAN se encarga de esta sección (destinos)-->
-
-    {{#each destinations}}
-    <div>
-        <div class="destination" style="background-image: url({{imagePath}});">
-            <p>Save {{discount}}$ pay only</p>
-            <h3>{{price}}$</h3>
-        </div><br> {{destination}}
-    </div>
-    {{/each}}
-
-</section>
-<section>
-    <!-- Jose A Lopez se encarga de esta sección (Quienes somos)-->
-    <div class='micro' id="quienesSomos">
-        <div class='quien'>
-            <h1>QUIEN SOMOS</h1>
-            <hr><br>
-            <p>Greekshubs Travels es una agencia de viajes online creada en 2009 por un equipo de viajeros entusiastas
-                que deciden hacer de su pasión por conocer el mundo un modo de vida. Desde nuestros inicios hemos
-                diseñado mas de 500 viajes organizados a diferentes destinos de Europa, Norteamérica y asia nuestros
-                objetivo ahora es ir ampliando horizontes poco a poco. </p>
-            <div class='butto'><button>DESCUBRIR</button><br></div>
+<div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
+    <div class="carousel-inner">
+        {{#each destinations}}
+        {{#unless  @index}}
+        <div class="carousel-item active">
+            {{else}}
+            <div class="carousel-item">
+                {{/unless }}
+               <div class="destinationCarrousel" style="background-image: url({{imagePath}});">
+                <p>Save {{discount}}$ pay only</p>
+                <h3>{{price}}$</h3>
+            </div><br> {{destination}}
+            </div>
+            {{/each}}
         </div>
-    </div>
-</section>
-<!--------------------------------------------------------------------------->
-<section class="contact" id="dondeEstamos">
-    <img src="./images/mapa.jpg" alt="mapa">
-    <div class="contactForm">
-        <p>
-            E:enquiry@geekshubstravels.com
-            <br>
-            P:0264 123 4567
-            <br><br>
-            Give us a call or drop by anytime,
-            we endeavour to answer all enquiries
-            within 24 hours on business days.
-            <br><br>
-            We are open from 8:30 AM - 4:00PM week days.</p>
-        <br>
-        <a class="barraAzul">
-            <br>
-            <br>
-            <form>
-
-                <input class="input" type="text" placeholder="Name*">
-                <input type="email" placeholder="Email*">
-                <br>
-                <input type="number" placeholder="Phone">
-                <input class="input" type="text" placeholder="Country">
-                <br>
-                <textarea id="" cols="83" rows="8" placeholder="Message"></textarea>
-                <div class="fieldsWarning">*PLEASE COMPLETE ALL THE FIELDS CORRECTLY</div>
-                <button>Enviar mensaje</button>
-            </form>
+        <a class="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-slide="prev">
+            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+            <span class="sr-only">Previous</span>
+        </a>
+        <a class="carousel-control-next" href="#carouselExampleIndicators" role="button" data-slide="next">
+            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+            <span class="sr-only">Next</span>
         </a>
     </div>
-</section>
+</div>
+    <section class="destinos" id="destinos">
+        {{#each destinations}}
+        <div>
+            <div class="destination" style="background-image: url({{imagePath}});">
+                <p>Save {{discount}}$ pay only</p>
+                <h3>{{price}}$</h3>
+            </div><br> {{destination}}
+        </div>
+        {{/each}}
+    </section>
+    <section>
+        <div class='micro' id="quienesSomos">
+            <div class='quien'>
+                <h1>QUIEN SOMOS</h1>
+                <hr><br>
+                <p>Greekshubs Travels es una agencia de viajes online creada en 2009 por un equipo de viajeros
+                    entusiastas
+                    que deciden hacer de su pasión por conocer el mundo un modo de vida. Desde nuestros inicios hemos
+                    diseñado mas de 500 viajes organizados a diferentes destinos de Europa, Norteamérica y asia nuestros
+                    objetivo ahora es ir ampliando horizontes poco a poco. </p>
+                <div class='butto'><button>DESCUBRIR</button><br></div>
+            </div>
+        </div>
+    </section>
+    <!--------------------------------------------------------------------------->
+    <section class="contact" id="dondeEstamos">
+        <img src="./images/mapa.jpg" alt="mapa">
+        <div class="contactForm">
+            <p>
+                E:enquiry@geekshubstravels.com
+                <br>
+                P:0264 123 4567
+                <br><br>
+                Give us a call or drop by anytime,
+                we endeavour to answer all enquiries
+                within 24 hours on business days.
+                <br><br>
+                We are open from 8:30 AM - 4:00PM week days.</p>
+            <br>
+            <a class="barraAzul">
+                <br>
+                <br>
+                <form>
+
+                    <input class="input" type="text" placeholder="Name*">
+                    <input type="email" placeholder="Email*">
+                    <br>
+                    <input type="number" placeholder="Phone">
+                    <input class="input" type="text" placeholder="Country">
+                    <br>
+                    <textarea id="" cols="83" rows="8" placeholder="Message"></textarea>
+                    <div class="fieldsWarning">*PLEASE COMPLETE ALL THE FIELDS CORRECTLY</div>
+                    <button>Enviar mensaje</button>
+                </form>
+            </a>
+        </div>
+    </section>

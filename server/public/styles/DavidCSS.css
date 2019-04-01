@@ -45,7 +45,7 @@ a:hover {
 .logo img {
   padding: 0.5em 0 0.5em;
   display: block;
-  height: 4em;
+  height: 3em;
 }
 .logo p {
   margin: 0;
@@ -85,7 +85,7 @@ header {
   align-items: center;
   color: white;
   padding: 2em;
-  background-size: cover;
+  background-size: 100vw;
   background-image: url("/images/nathan-anderson-316188-unsplash.jpg");
 }
 header h1 {
@@ -105,6 +105,114 @@ header button {
   text-align: center;
   font-size: 1.2em;
   padding: 0.6em;
+}
+
+.destinos {
+  text-align: center;
+  font-size: 1.2em;
+  font-weight: bold;
+  background-color: #fff;
+  color: black;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  align-content: center;
+  justify-content: center;
+}
+@media (max-width: 600px) {
+  .destinos {
+    display: none;
+  }
+}
+.destinos div {
+  padding: 2em 0.5em 1em 0.5em;
+}
+
+.destination {
+  background-size: cover;
+  background-repeat: no-repeat;
+  height: 18em;
+  width: 20em;
+  position: relative;
+  z-index: 1;
+  transition: all ease-in-out 700ms;
+}
+.destination:hover {
+  opacity: 0.7;
+}
+.destination p {
+  font-size: 1.2em;
+  text-align: left;
+  padding: 0.5em 0 0.5em 0.5em;
+  top: -1.65em;
+  left: -0.42em;
+  margin: 0 auto;
+  position: relative;
+  color: white;
+  background-color: #141939;
+  z-index: 2;
+}
+.destination h3 {
+  font-size: 2em;
+  font-weight: bold;
+  top: -2.55em;
+  right: -3.1em;
+  width: 40%;
+  margin: 0 auto;
+  position: relative;
+  color: black;
+  padding: 0.5em;
+  background-color: #fef200;
+  z-index: 3;
+}
+
+#carouselExampleIndicators {
+  text-align: center;
+  font-size: 1.2em;
+  font-weight: bold;
+}
+@media (min-width: 600px) {
+  #carouselExampleIndicators {
+    display: none;
+  }
+}
+
+.destinationCarrousel {
+  opacity: 0.85;
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start;
+  margin: 0.5em;
+  background-size: cover;
+  height: 45vh;
+  position: relative;
+  transition: all ease-in-out 700ms;
+}
+.destinationCarrousel:hover {
+  opacity: 1;
+}
+.destinationCarrousel p {
+  font-size: 1.2rem;
+  text-align: left;
+  font-weight: bold;
+  padding: 0.5em 0 0.5em 0.5em;
+  margin: 0 auto;
+  position: relative;
+  color: white;
+  background-color: #141939;
+  z-index: 2;
+  width: 100%;
+}
+.destinationCarrousel h3 {
+  font-size: 2em;
+  font-weight: bold;
+  width: 40%;
+  margin: 0 auto;
+  position: relative;
+  color: black;
+  padding: 0.5em;
+  background-color: #fef200;
+  z-index: 3;
 }
 
 .micro {
@@ -156,73 +264,6 @@ header button {
   color: yellow;
   font-weight: bold;
   padding: 10px;
-}
-
-.destinos {
-  text-align: center;
-  font-size: 1.2em;
-  font-weight: bold;
-  background-color: #fff;
-  color: black;
-  display: flex;
-  flex-direction: row;
-  flex-wrap: wrap;
-  align-content: center;
-  justify-content: center;
-}
-.destinos div {
-  padding: 2em 0.5em 1em 0.5em;
-}
-
-.destination {
-  background-size: cover;
-  background-repeat: no-repeat;
-  height: 18em;
-  width: 20em;
-  position: relative;
-  z-index: 1;
-  transition: all ease-in-out 700ms;
-}
-.destination:hover {
-  opacity: 0.7;
-}
-.destination p {
-  font-size: 1.2em;
-  text-align: left;
-  padding: 0.5em 0 0.5em 0.5em;
-  top: -1.65em;
-  left: -0.42em;
-  margin: 0 auto;
-  position: relative;
-  color: white;
-  background-color: #141939;
-  z-index: 2;
-}
-.destination h3 {
-  font-size: 2em;
-  font-weight: bold;
-  top: -2.55em;
-  right: -3.1em;
-  width: 40%;
-  margin: 0 auto;
-  position: relative;
-  color: black;
-  padding: 0.5em;
-  background-color: #fef200;
-  z-index: 3;
-}
-
-.imagenes_destinos {
-  display: block;
-  position: relative;
-  width: 20em;
-  height: 18em;
-  z-index: 0;
-}
-
-.texto_destinos {
-  z-index: 2;
-  font-size: 1.4em;
 }
 
 /* CONTACT */
@@ -322,6 +363,11 @@ footer .suscribete {
     display: flex;
     margin: 0 auto;
     margin-top: 2em;
+  }
+}
+@media (max-width: 768px) {
+  footer .informacion {
+    display: none;
   }
 }
 footer .ayuda {

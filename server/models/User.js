@@ -1,7 +1,5 @@
 const mongoose = require('mongoose')
-const {
-    pick
-} = require('lodash')
+const { pick } = require('lodash')
 const UserSchema = new mongoose.Schema({
     // _id,
     name: {
@@ -18,7 +16,6 @@ const UserSchema = new mongoose.Schema({
         type: String,
         required: true,
         minlength: 8,
-        //encriptarla
     }
 
 });
