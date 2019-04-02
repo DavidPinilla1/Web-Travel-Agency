@@ -1,0 +1,416 @@
+body {
+    font-family: Arial;
+    line-height: 1.6;
+    background-repeat: no-repeat;
+}
+
+/* ----NAV---- */
+nav {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    position: sticky;
+    top: 0;
+    padding: 0.62em;
+    background-color: rgb(0, 70, 150);
+    z-index: 70;
+    background-size: cover;
+    background-image: url('/images/nav.png');
+
+    ul {
+        display: flex;
+        flex-direction: row;
+
+        @media (max-width: 768px) {
+            display: none;
+        }
+    }
+
+    a {
+        color: white;
+        font-style: italic;
+    }
+
+    li {
+        font-size: 1.4em;
+        text-shadow: 2px 2px 0.1em black, 3px 5px 0.5em black, -2px -2px 0.4em black;
+        margin-left: 1em;
+        list-style: none;
+    }
+}
+
+a:hover {
+    text-decoration: none;
+}
+
+.logo {
+    img {
+        padding: 0.5em 0 0.5em;
+        display: block;
+        height: 3em;
+    }
+
+    p {
+        margin: 0;
+        padding-bottom: 0.5em;
+        font-size: 1em;
+        line-height: 1;
+        font-weight: bold;
+        color: #ffffff;
+        text-align: center
+    }
+}
+
+.bg-dark {
+    background-color: rgba(0, 195, 255, 0.11) !important;
+
+    @media (min-width: 768px) {
+        display: none
+    }
+}
+
+.socialMedia {
+    margin: 0.4em;
+
+    img {
+        width: 2em;
+    }
+
+    @media (max-width: 768px) {
+        display: none
+    }
+}
+
+/* HEADER */
+header {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    color: white;
+    padding: 2em;
+    background-size: 100vw;
+    background-image: url('/images/nathan-anderson-316188-unsplash.jpg');
+
+    h1 {
+        font-weight: bold;
+        font-size: 4em;
+    }
+
+    p {
+        margin-bottom: 1em;
+        font-size: 2.5em;
+    }
+
+    button {
+        all: unset;
+        display: inline;
+        color: black;
+        background-color: #fef200;
+        font-style: italic;
+        text-align: center;
+        font-size: 1.2em;
+        padding: 0.6em;
+    }
+}
+
+.destinos {
+    text-align: center;
+    font-size: 1.2em;
+    font-weight: bold;
+    background-color: #fff;
+    color: black;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    align-content: center;
+    justify-content: center;
+    @media (max-width: 600px) {
+        display: none;    
+    }
+    div {
+        padding: 2em 0.5em 1em 0.5em;
+    }
+}
+
+
+.destination {
+    background-size: cover;
+    background-repeat: no-repeat;
+    height: 18em;
+    width: 20em;
+    position: relative;
+    z-index: 1;
+    transition: all ease-in-out 700ms;
+   
+    &:hover {
+        opacity: 0.7;
+
+    }
+
+    p {
+        font-size: 1.2em;
+        text-align: left;
+        padding: 0.5em 0 0.5em 0.5em;
+        top: -1.65em;
+        left: -0.42em;
+        margin: 0 auto;
+        position: relative;
+        color: white;
+        background-color: #141939;
+        z-index: 2;
+    }
+
+    h3 {
+        font-size: 2em;
+        font-weight: bold;
+        top: -2.55em;
+        right: -3.1em;
+        width: 40%;
+        margin: 0 auto;
+        position: relative;
+        color: black;
+        padding: 0.5em;
+        background-color: #fef200;
+        z-index: 3;
+    }
+}
+#carouselExampleIndicators{
+    text-align: center;
+    font-size: 1.2em;
+    font-weight: bold;
+    @media (min-width: 600px) {
+        display: none;    
+    }
+}
+.destinationCarrousel{
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+    margin:0.5em;
+    background-size: cover;
+    height: 45vh;
+    position: relative; 
+    transition: all ease-in-out 700ms;
+    &:hover {
+    }
+
+    p {
+        font-size: 1.2rem;
+        text-align: left;
+        font-weight: bold;
+        padding: 0.5em 0 0.5em 0.5em;
+        margin: 0 auto;
+        position: relative;
+        color: white;
+        background-color: #141939;
+        z-index: 2;
+        width: 100%;
+    }
+
+    h3 {
+        font-size: 2em;
+        font-weight: bold;
+        // top: -1.55em;
+        width: 40%;
+        margin: 0 auto;
+        position: relative;
+        color: black;
+        padding: 0.5em;
+        background-color: #fef200;
+        z-index: 3;
+    }
+}
+
+//-----------------------QUIENES SOMOS SECTION-----------------------//
+.micro {
+    background-size: cover;
+    background-image: url('/images/travel_3.jpg');
+    padding: 50px;
+
+    @media (max-width: 768px) {
+        padding: 0;
+
+    }
+}
+
+.quien {
+    background-color: whitesmoke;
+    padding: 30px;
+    text-align: justify;
+    width: 40%;
+
+    @media (max-width: 768px) {
+        width: 100%;
+    }
+
+    hr {
+        background-color: gold;
+        height: 5px;
+        width: 50%;
+        float: left;
+    }
+
+    h1 {
+        font-weight: bold;
+        font-style: italic;
+        font-size: 2em;
+        color: darkblue;
+    }
+
+    p {
+        color: darkblue;
+        padding: 2em;
+    }
+}
+
+
+.butto {
+    width: 100%;
+    text-align: center;
+
+    button {
+        font-weight: bold;
+        background-color: darkblue;
+        color: yellow;
+        font-weight: bold;
+        padding: 10px;
+
+    }
+}
+
+
+/* CONTACT */
+.contact {
+    display: flex;
+    flex-direction: row;
+    background-color: #fcfcfc;
+    padding: 4em 0 6em 1.4em;
+    justify-content: center;
+    @media (max-width: 768px) {
+        display: none;
+
+    }
+
+    img {
+        display: block;
+    }
+
+
+    button {
+        all: unset;
+        display: inline;
+        font-style: italic;
+        text-align: center;
+        color: black;
+        background-color: #fef200;
+        font-size: 1.3em;
+        padding: 0.6em;
+    }
+
+}
+
+.contactForm {
+    padding: 0 0 0 4em;
+    flex-wrap: wrap;
+
+
+    input {
+        font-size: 0.8em;
+        margin: 0.6em;
+        width: 40%;
+        padding: 0.6em;
+    }
+
+    textarea {
+        font-size: 0.8em;
+        margin: 0.6em;
+        padding: 0.8em;
+        width: 83%;
+    }
+}
+
+.fieldsWarning {
+    font-size: .7em;
+}
+
+/*------- Footer---------*/
+footer {
+    padding: 1.5em;
+    font-size: 1.4em;
+    color: white;
+    background-color: #141939;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    margin: 0 auto;
+
+    @media (max-width: 768px) {
+        padding: 5em;
+        flex-direction: column;
+    }
+
+    input {
+        font-size: 0.6em;
+        padding: 0.5em;
+        width: 80%;
+
+    }
+
+    button {
+        all: unset;
+        display: inline;
+        color: black;
+        text-align: center;
+        background-color: #fef200;
+        font-size: 1.3em;
+        padding: 0.6em;
+    }
+
+
+
+    .horario {
+        padding-top: 2em;
+        font-size: 0.8em;
+    }
+
+    .ayuda,
+    .informacion,
+    .suscribete {
+        display: flex;
+        flex-direction: column;
+        margin: 0 auto;
+
+        @media (max-width: 768px) {
+            display: flex;
+            margin: 0 auto;
+            margin-top: 2em;
+        }
+    }
+
+    .informacion{
+        @media (max-width:768px) {
+            display: none;
+        }
+    }
+    .ayuda {
+        padding-left: 9.5em;
+
+        @media (max-width: 768px) {
+            padding-left: 0;
+        }
+    }
+
+    p {
+        padding-left: 0.8em;
+    }
+}
+
+.copyright {
+    border: solid black 0.1em;
+    padding: 1em;
+    text-align: center;
+    color: white;
+    background-color: #141939;
+    margin: 0 auto;
+}

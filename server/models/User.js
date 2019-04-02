@@ -1,5 +1,6 @@
 const mongoose = require('mongoose')
 const { pick } = require('lodash')
+const {isEmail} = require('validator')
 const UserSchema = new mongoose.Schema({
     // _id,
     name: {
@@ -10,7 +11,13 @@ const UserSchema = new mongoose.Schema({
     email: {
         type: String,
         required: true,
-        unique: true
+        unique: true,
+        trim: true,
+        validate: {
+            isAsync: true,
+            validator: (email)=> isEmail(email),
+            message: 'the ${email} entered is not a valid email.'
+            }
     },
     password: {
         type: String,

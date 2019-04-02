@@ -1,12 +1,12 @@
 {
-  "name": "Web-Travel-Agency",
+  "name": "web-travel-agency",
   "version": "1.0.0",
   "description": "",
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "export NODE_ENV=production || NODE_ENV=production ||SET \"NODE_ENV=production\" && node server/",
-    "dev": "export NODE_ENV=development || NODE_ENV=development ||SET \"NODE_ENV=development\" && nodemon server/"
+    "start": "export NODE_ENV=production || NODE_ENV=production || SET \"NODE_ENV=production\" && node server/",
+    "dev": "export NODE_ENV=development || NODE_ENV=development || SET \"NODE_ENV=development\" && nodemon server/"
   },
   "keywords": [],
   "author": "David Pinilla",
@@ -17,6 +17,9 @@
     "hbs-utils": "0.0.4",
     "lodash": "^4.17.11",
     "mongoose": "^5.4.19",
+    "validator": "^10.11.0"
+  },
+  "devDependencies": {
     "morgan": "^1.9.1"
   }
 }
