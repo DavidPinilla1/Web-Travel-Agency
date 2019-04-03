@@ -7,7 +7,6 @@ router.get('/', (req, res) => {
         res.render('index.hbs', {
             title: 'Web Travel Agency',
             destinations: destinations,
-            layout: 'template'
         });
     })
 });

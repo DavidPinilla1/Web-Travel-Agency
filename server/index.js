@@ -4,6 +4,7 @@ const app = express();
 const port = process.env.PORT || 3000;
 const router = require('./routes');
 const destinationsRoutes=require('./routes/destinations')
+const viewsRoutes=require('./routes/views')
 const morgan=require('morgan')
 const hbs = require('hbs')
 const hbsUtils = require('hbs-utils')(hbs);
@@ -17,6 +18,7 @@ app.use(express.json());
 app.use(morgan('tiny'))
 app.use('/', express.static(`${__dirname}/public`))
 app.use(router);
+app.use(viewsRoutes)
 app.use('/destinations',destinationsRoutes)
 
 

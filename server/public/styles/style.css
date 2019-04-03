@@ -1,3 +1,7 @@
+* {
+  box-sizing: border-box;
+}
+
 body {
   font-family: Arial;
   line-height: 1.6;
@@ -119,7 +123,7 @@ header button {
   align-content: center;
   justify-content: center;
 }
-@media (max-width: 600px) {
+@media (max-width: 768px) {
   .destinos {
     display: none;
   }
@@ -171,7 +175,7 @@ header button {
   font-size: 1.2em;
   font-weight: bold;
 }
-@media (min-width: 600px) {
+@media (min-width: 768px) {
   #carouselExampleIndicators {
     display: none;
   }
@@ -306,10 +310,6 @@ header button {
   width: 83%;
 }
 
-.fieldsWarning {
-  font-size: 0.7em;
-}
-
 /*------- Footer---------*/
 footer {
   padding: 1.5em;
@@ -385,6 +385,41 @@ footer p {
   color: white;
   background-color: #141939;
   margin: 0 auto;
+}
+
+.bgregister {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  background-image: url("/images/airportBG.png");
+}
+
+.register,
+.login {
+  display: inline-flex;
+  border-radius: 1.7em;
+  flex-direction: column;
+  align-items: center;
+  background-color: #e3f6ffd5;
+  justify-content: space-between;
+  transition: all ease-in-out 0.7s;
+  height: 70vh;
+}
+.register input:not([type=checkbox]),
+.login input:not([type=checkbox]) {
+  all: unset;
+  display: inline-block;
+  border-radius: 0.5em;
+  color: #001d2e;
+  padding: 1em;
+  background-color: #007b91;
+  transition: all ease-in-out 0.7s;
+}
+
+::placeholder {
+  color: #002c3a;
+  font-style: italic;
+  font-size: 0.8em;
 }
 
 /*# sourceMappingURL=style.css.map */
