@@ -366,14 +366,6 @@ footer .suscribete {
     display: none;
   }
 }
-footer .ayuda {
-  padding-left: 9.5em;
-}
-@media (max-width: 768px) {
-  footer .ayuda {
-    padding-left: 0;
-  }
-}
 footer p {
   padding-left: 0.8em;
 }
@@ -396,30 +388,92 @@ footer p {
 
 .register,
 .login {
-  display: inline-flex;
+  margin: 2em;
+  display: flex;
   border-radius: 1.7em;
   flex-direction: column;
   align-items: center;
-  background-color: #e3f6ffd5;
+  background-color: #4b9fff81;
   justify-content: space-between;
   transition: all ease-in-out 0.7s;
-  height: 70vh;
 }
 .register input:not([type=checkbox]),
 .login input:not([type=checkbox]) {
   all: unset;
-  display: inline-block;
   border-radius: 0.5em;
   color: #001d2e;
+  margin: 1.5em;
   padding: 1em;
-  background-color: #007b91;
+  background-color: #0182fae8;
   transition: all ease-in-out 0.7s;
+}
+.register .terms,
+.login .terms {
+  display: block;
+  position: relative;
+  padding-left: 35px;
+  margin: 1.5em;
+  cursor: pointer;
+  user-select: none;
+  text-align: justify;
+  font-weight: bold;
+}
+.register .terms input,
+.login .terms input {
+  position: absolute;
+  opacity: 0;
+  cursor: pointer;
+  height: 0;
+  width: 0;
+}
+.register .terms input:checked ~ .checkmark,
+.login .terms input:checked ~ .checkmark {
+  background-color: #0056d8;
+}
+.register .terms input:checked ~ .checkmark:after,
+.login .terms input:checked ~ .checkmark:after {
+  display: block;
+}
+.register .terms:hover input ~ .checkmark,
+.login .terms:hover input ~ .checkmark {
+  background-color: #5b8fff;
+}
+.register .terms .checkmark,
+.login .terms .checkmark {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 1.5em;
+  width: 1.5em;
+  background-color: #b1d9ff;
+}
+.register .terms .checkmark:after,
+.login .terms .checkmark:after {
+  content: "";
+  position: absolute;
+  display: none;
+  left: 9px;
+  top: 2px;
+  width: 7.5px;
+  height: 15px;
+  border: solid #cbeaff;
+  border-width: 0 3px 3px 0;
+  transform: rotate(45deg);
+}
+.register button,
+.login button {
+  all: unset;
+  background-color: #002ba1;
+  color: #83b9ff;
+  border-radius: 0.7em;
+  font-weight: bold;
+  padding: 1em;
+  margin: 0.5em;
 }
 
 ::placeholder {
   color: #002c3a;
   font-style: italic;
-  font-size: 0.8em;
 }
 
 /*# sourceMappingURL=style.css.map */

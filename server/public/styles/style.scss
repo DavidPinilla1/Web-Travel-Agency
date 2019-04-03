@@ -1,6 +1,7 @@
 * {
     box-sizing: border-box;
 }
+
 body {
     font-family: Arial;
     line-height: 1.6;
@@ -128,9 +129,11 @@ header {
     flex-wrap: wrap;
     align-content: center;
     justify-content: center;
+
     @media (max-width: 768px) {
-        display: none;    
+        display: none;
     }
+
     div {
         padding: 2em 0.5em 1em 0.5em;
     }
@@ -145,7 +148,7 @@ header {
     position: relative;
     z-index: 1;
     transition: all ease-in-out 700ms;
-   
+
     &:hover {
         opacity: 0.7;
 
@@ -178,25 +181,28 @@ header {
         z-index: 3;
     }
 }
-#carouselExampleIndicators{
+
+#carouselExampleIndicators {
     text-align: center;
     font-size: 1.2em;
     font-weight: bold;
+
     @media (min-width: 768px) {
-        display: none;    
+        display: none;
     }
 }
-.destinationCarrousel{
+
+.destinationCarrousel {
     display: flex;
     flex-direction: row;
     align-items: flex-start;
-    margin:0.5em;
+    margin: 0.5em;
     background-size: cover;
     height: 45vh;
-    position: relative; 
+    position: relative;
     transition: all ease-in-out 700ms;
-    &:hover {
-    }
+
+    &:hover {}
 
     p {
         font-size: 1.2rem;
@@ -290,6 +296,7 @@ header {
     background-color: #fcfcfc;
     padding: 4em 0 6em 1.4em;
     justify-content: center;
+
     @media (max-width: 768px) {
         display: none;
 
@@ -391,16 +398,9 @@ footer {
         }
     }
 
-    .informacion{
-        @media (max-width:768px) {
-            display: none;
-        }
-    }
-    .ayuda {
-        padding-left: 9.5em;
-
+    .informacion {
         @media (max-width: 768px) {
-            padding-left: 0;
+            display: none;
         }
     }
 
@@ -417,7 +417,8 @@ footer {
     background-color: #141939;
     margin: 0 auto;
 }
-.bgregister{
+
+.bgregister {
     display: flex;
     flex-direction: row;
     justify-content: center;
@@ -426,28 +427,91 @@ footer {
 
 .register,
 .login {
-    display: inline-flex;
+    margin: 2em;
+    display: flex;
     border-radius: 1.7em;
     flex-direction: column;
     align-items: center;
-    background-color: #e3f6ffd5;
+    background-color: #4b9fff81;
     justify-content: space-between;
     transition: all ease-in-out 0.7s;
-    height: 70vh;
 
     input:not([type="checkbox"]) {
         all: unset;
-        display: inline-block;
         border-radius: 0.5em;
         color: rgb(0, 29, 46);
+        margin: 1.5em;
         padding: 1em;
-        background-color: #007b91;
+        background-color: #0182fae8;
         transition: all ease-in-out 0.7s;
     }
 
+    .terms {
+        display: block;
+        position: relative;
+        padding-left: 35px;
+        margin: 1.5em;
+        cursor: pointer;
+        user-select: none;
+        text-align: justify;
+        font-weight: bold;
+
+        input {
+            position: absolute;
+            opacity: 0;
+            cursor: pointer;
+            height: 0;
+            width: 0;
+
+            &:checked~.checkmark {
+                background-color: rgb(0, 86, 216);
+
+                &:after {
+                    display: block;
+                }
+            }
+        }
+
+        &:hover input~.checkmark {
+            background-color: rgb(91, 143, 255);
+        }
+
+        .checkmark {
+            position: absolute;
+            top: 0;
+            left: 0;
+            height: 1.5em;
+            width: 1.5em;
+            background-color: rgb(177, 217, 255);
+
+            &:after {
+                content: "";
+                position: absolute;
+                display: none;
+                left: 9px;
+                top: 2px;
+                width: 7.5px;
+                height: 15px;
+                border: solid rgb(203, 234, 255);
+                border-width: 0 3px 3px 0;
+                transform: rotate(45deg);
+            }
+
+        }
+    }
+
+    button {
+        all: unset;
+        background-color: rgb(0, 43, 161);
+        color:rgb(131, 185, 255);
+        border-radius: .7em;
+        font-weight: bold;
+        padding: 1em;
+        margin:0.5em;
+    }
 }
+
 ::placeholder {
     color: rgb(0, 44, 58);
     font-style: italic;
-    font-size: 0.8em;
 }
