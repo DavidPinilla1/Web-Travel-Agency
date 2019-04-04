@@ -41,6 +41,8 @@ nav {
         text-shadow: 2px 2px 0.1em black, 3px 5px 0.5em black, -2px -2px 0.4em black;
         margin-left: 1em;
         list-style: none;
+
+        transition: all ease-in-out 500ms;
     }
 }
 
@@ -141,6 +143,7 @@ header {
 
 
 .destination {
+    cursor: pointer;
     background-size: cover;
     background-repeat: no-repeat;
     height: 18em;
@@ -432,8 +435,7 @@ footer {
     border-radius: 1.7em;
     flex-direction: column;
     align-items: center;
-    background-color: #4b9fff81;
-    justify-content: space-between;
+    background-color: #4a9effbb;
     transition: all ease-in-out 0.7s;
 
     input:not([type="checkbox"]) {
@@ -455,6 +457,7 @@ footer {
         user-select: none;
         text-align: justify;
         font-weight: bold;
+        max-width: 26em;
 
         input {
             position: absolute;
@@ -464,7 +467,7 @@ footer {
             width: 0;
 
             &:checked~.checkmark {
-                background-color: rgb(0, 86, 216);
+                background-color: rgb(0, 68, 170);
 
                 &:after {
                     display: block;
@@ -503,15 +506,94 @@ footer {
     button {
         all: unset;
         background-color: rgb(0, 43, 161);
-        color:rgb(131, 185, 255);
+        color: rgb(131, 185, 255);
         border-radius: .7em;
         font-weight: bold;
         padding: 1em;
-        margin:0.5em;
+        margin-bottom: 1.5em;
     }
+}
+
+.pos-f-t {
+    order: 1;
 }
 
 ::placeholder {
     color: rgb(0, 44, 58);
     font-style: italic;
+    font-weight: bold;
+}
+
+.user {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    color: white;
+    justify-content: space-between;
+
+    .userName,
+    .userEmail {
+        padding: 0.5em;
+
+        @media (max-width: 768px) {
+            display: none
+        }
+    }
+
+    .profilePicture {
+        display: block;
+        width: 5em;
+        height: 5em;
+
+        @media (max-width: 768px) {
+            width: 3em;
+            height: 3em;
+        }
+    }
+
+    .edit {
+        cursor: pointer;
+        position: absolute;
+        width: 5em;
+        height: 5em;
+        opacity: 0;
+        z-index: 3;
+        transition: all ease-in-out 500ms;
+
+        &:hover {
+            opacity: 0.5;
+        }
+
+        @media (max-width:768px) {
+            width: 3em;
+            height: 3em;
+        }
+    }
+
+    .logout {
+        all: unset;
+        cursor: pointer;
+        background-color: rgb(106, 145, 255);
+        color: rgb(2, 58, 131);
+        border-radius: .7em;
+        font-weight: bold;
+        padding: 0.7em;
+        margin: 0.3em;
+        transition: all ease-in-out 500ms;
+
+        &:hover {
+
+            color: rgb(0, 42, 90);
+            background-color: rgb(5, 143, 255);
+        }
+    }
+}
+
+.verifiedMessage {
+    position: absolute;
+    border-radius: 0.3em;
+    font-weight: bold;
+    padding: 0.4em;
+    font-size: 1.4em;
+    background-color: rgba(131, 255, 148, 0.384);
 }

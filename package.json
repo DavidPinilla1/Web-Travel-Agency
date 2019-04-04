@@ -12,14 +12,19 @@
   "author": "David Pinilla",
   "license": "ISC",
   "dependencies": {
+    "bcrypt": "^3.0.5",
     "express": "^4.16.4",
+    "express-session": "^1.15.6",
     "hbs": "^4.0.3",
     "hbs-utils": "0.0.4",
+    "jsonwebtoken": "^8.5.1",
     "lodash": "^4.17.11",
     "mongoose": "^5.4.19",
+    "nodemailer": "^6.0.0",
     "validator": "^10.11.0"
   },
   "devDependencies": {
-    "morgan": "^1.9.1"
+    "morgan": "^1.9.1",
+    "nodemon": "^1.18.10"
   }
 }

@@ -40,6 +40,7 @@ nav li {
   text-shadow: 2px 2px 0.1em black, 3px 5px 0.5em black, -2px -2px 0.4em black;
   margin-left: 1em;
   list-style: none;
+  transition: all ease-in-out 500ms;
 }
 
 a:hover {
@@ -133,6 +134,7 @@ header button {
 }
 
 .destination {
+  cursor: pointer;
   background-size: cover;
   background-repeat: no-repeat;
   height: 18em;
@@ -393,8 +395,7 @@ footer p {
   border-radius: 1.7em;
   flex-direction: column;
   align-items: center;
-  background-color: #4b9fff81;
-  justify-content: space-between;
+  background-color: #4a9effbb;
   transition: all ease-in-out 0.7s;
 }
 .register input:not([type=checkbox]),
@@ -417,6 +418,7 @@ footer p {
   user-select: none;
   text-align: justify;
   font-weight: bold;
+  max-width: 26em;
 }
 .register .terms input,
 .login .terms input {
@@ -428,7 +430,7 @@ footer p {
 }
 .register .terms input:checked ~ .checkmark,
 .login .terms input:checked ~ .checkmark {
-  background-color: #0056d8;
+  background-color: #0044aa;
 }
 .register .terms input:checked ~ .checkmark:after,
 .login .terms input:checked ~ .checkmark:after {
@@ -468,12 +470,86 @@ footer p {
   border-radius: 0.7em;
   font-weight: bold;
   padding: 1em;
-  margin: 0.5em;
+  margin-bottom: 1.5em;
+}
+
+.pos-f-t {
+  order: 1;
 }
 
 ::placeholder {
   color: #002c3a;
   font-style: italic;
+  font-weight: bold;
+}
+
+.user {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  color: white;
+  justify-content: space-between;
+}
+.user .userName, .user .userEmail {
+  padding: 0.5em;
+}
+@media (max-width: 768px) {
+  .user .userName, .user .userEmail {
+    display: none;
+  }
+}
+.user .profilePicture {
+  display: block;
+  width: 5em;
+  height: 5em;
+}
+@media (max-width: 768px) {
+  .user .profilePicture {
+    width: 3em;
+    height: 3em;
+  }
+}
+.user .edit {
+  cursor: pointer;
+  position: absolute;
+  width: 5em;
+  height: 5em;
+  opacity: 0;
+  z-index: 3;
+  transition: all ease-in-out 500ms;
+}
+.user .edit:hover {
+  opacity: 0.5;
+}
+@media (max-width: 768px) {
+  .user .edit {
+    width: 3em;
+    height: 3em;
+  }
+}
+.user .logout {
+  all: unset;
+  cursor: pointer;
+  background-color: #6a91ff;
+  color: #023a83;
+  border-radius: 0.7em;
+  font-weight: bold;
+  padding: 0.7em;
+  margin: 0.3em;
+  transition: all ease-in-out 500ms;
+}
+.user .logout:hover {
+  color: #002a5a;
+  background-color: #058fff;
+}
+
+.verifiedMessage {
+  position: absolute;
+  border-radius: 0.3em;
+  font-weight: bold;
+  padding: 0.4em;
+  font-size: 1.4em;
+  background-color: rgba(131, 255, 148, 0.384);
 }
 
 /*# sourceMappingURL=style.css.map */
