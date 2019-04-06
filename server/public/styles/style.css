@@ -162,7 +162,7 @@ header button {
   font-size: 2em;
   font-weight: bold;
   top: -2.55em;
-  right: -3.1em;
+  right: -3.11em;
   width: 40%;
   margin: 0 auto;
   position: relative;
@@ -381,20 +381,23 @@ footer p {
   margin: 0 auto;
 }
 
-.bgregister {
+.bgregister, .bglogin {
   display: flex;
   flex-direction: row;
   justify-content: center;
   background-image: url("/images/airportBG.png");
+  min-height: 50vh;
 }
 
 .register,
 .login {
   margin: 2em;
+  padding: 1em;
   display: flex;
   border-radius: 1.7em;
   flex-direction: column;
   align-items: center;
+  justify-content: space-evenly;
   background-color: #4a9effbb;
   transition: all ease-in-out 0.7s;
 }
@@ -407,6 +410,15 @@ footer p {
   padding: 1em;
   background-color: #0182fae8;
   transition: all ease-in-out 0.7s;
+}
+.register .passwordRule, .register .passwordRule2,
+.login .passwordRule,
+.login .passwordRule2 {
+  color: #a00000;
+  font-weight: bold;
+  font-style: italic;
+  display: none;
+  margin: -0.8em;
 }
 .register .terms,
 .login .terms {
@@ -490,11 +502,13 @@ footer p {
   color: white;
   justify-content: space-between;
 }
-.user .userName, .user .userEmail {
+.user .userName,
+.user .userEmail {
   padding: 0.5em;
 }
 @media (max-width: 768px) {
-  .user .userName, .user .userEmail {
+  .user .userName,
+.user .userEmail {
     display: none;
   }
 }

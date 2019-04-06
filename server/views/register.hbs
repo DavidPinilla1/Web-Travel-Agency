@@ -3,10 +3,10 @@
         <input type="text" name="name" class="name" placeholder="Introduce your name" >
         <input type="text" name="lastname" class="lastname" placeholder="Introduce your lastname" >
         <input type="email" name="email" class="email" placeholder="Introduce your email*" required="true">
-        <input type="password" name="password" class="password" placeholder="Enter your password*" required="true">
-        <label>password must contain at least 8 characters</label>
+        <input type="password" name="password" class="password" placeholder="Enter your password*" minlength="8" required="true">
+        <label class="passwordRule">Password must contain at least 8 characters.</label>
         <input type="password" name="passwordConfirm" class="passwordConfirm" placeholder="Confirm your password*" required="true" oninput="check(this)">
-        <label class="terms"> <input type="checkbox" required="true" /> By clicking on Sign up, you agree to David
+        <label class="passwordRule2">Both password should match.</label><label class="terms"> <input type="checkbox" required="true" /> By clicking on Sign up, you agree to David
             Travel Agency's Terms and Conditions of Use.*
             <span class="checkmark"></span></label>
         <button type="submit" class="submit" value="Submit"> SIGN UP</button>

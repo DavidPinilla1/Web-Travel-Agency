@@ -34,7 +34,8 @@ const UserSchema = new mongoose.Schema({
     type: String,
     required: true,
     minlength: 8,
-  }
+  },
+  imagePath:String
 }, { timestamps: true });
 
 UserSchema.methods.toJSON = function () {
@@ -48,11 +49,9 @@ UserSchema.pre('save', function (next) {
     bcrypt.genSalt(SALT_I).then(salt => bcrypt.hash(user.password, salt).then(hash => {
         user.password = hash;
         next();
-      }).catch(err => next(err)))
-      .catch(err => next(err))
-  } else {
-    next();
-  }
+      }).catch(err => next(err))
+      ).catch(err => next(err))
+  } else next();
 });
 
 UserSchema.methods.comparePassword = function (candidatePassword, cb) {

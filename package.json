@@ -6,7 +6,9 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "start": "export NODE_ENV=production || NODE_ENV=production || SET \"NODE_ENV=production\" && node server/",
-    "dev": "export NODE_ENV=development || NODE_ENV=development || SET \"NODE_ENV=development\" && nodemon server/"
+    "dev": "export NODE_ENV=development || NODE_ENV=development || SET \"NODE_ENV=development\" && nodemon server/",
+    "sass": "sass --watch ./server/public/styles/style.scss ./server/public/styles/style.css"
+    
   },
   "keywords": [],
   "author": "David Pinilla",

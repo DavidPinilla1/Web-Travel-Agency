@@ -2,16 +2,9 @@ const router = require('express').Router();
 const config = require('../config/password')
 const User = require('../models/User');
 const Destinations = require('../models/Destination')
-const nodemailer = require('nodemailer');
+const transporter = require('../config/nodemailer');
 const jwt = require('jsonwebtoken')
-let transporter = nodemailer.createTransport({
-    service: 'Gmail',
-    secure: true,
-    auth: {
-        user: config.GMAIL.email,
-        pass: config.GMAIL.password
-    }
-})
+
 router.post('/signup', (req, res) => {
     jwt.sign({
         user: req.body.email
@@ -52,4 +45,13 @@ router.get('/confirmation/:token', (req, res) => {
         }).catch(console.log)
     }).catch(console.log)
 })
+router.post('/login', (req, res) => {
+    User.findOne({email:req.body.email}).then(userFound=>{
+        if(!userFound)return res.json({message:'Email or password wrong'})
+        User.comparePassword(req.body.password, userFound.password).then(isMatch=>{
+            if(!isMatch)return res.json({message:'Email or password wrong'})
+            res.json({userFound, message:"successfully logged in"})
+        })
+    })
+});
 module.exports = router;
