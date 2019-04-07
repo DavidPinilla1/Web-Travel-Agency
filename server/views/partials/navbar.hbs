@@ -1,9 +1,10 @@
 <nav>
-   <a href="/"> <div class="logo">
-        <img src="images/iconoweb.png" alt="logo">
-        <p>Geekshubs <br>
-            Travels </p>
-    </div>
+    <a href="/">
+        <div class="logo">
+            <img src="images/iconoweb.png" alt="logo">
+            <p>Geekshubs <br>
+                Travels </p>
+        </div>
     </a>
     <ul>
         <a href="#destinos">
@@ -42,9 +43,9 @@
             </button>
         </nav>
         <div class="user">
-        {{#if isAuthenticated}}
-           <a href="/profile"> <img class="profilePicture" src="/images/profile.png" alt="profileImage">
-            <img class="edit" src="/images/edit.png" alt="edit" /></a>
+            {{#if isAuthenticated}}
+            <a href="/profile"> <img class="profilePicture" src="/images/profile.png" alt="profileImage">
+                <img class="edit" src="/images/edit.png" alt="edit" /></a>
             {{#if name}}
             <div class="userName"> {{user.name}}</div>
             {{else}}
@@ -52,13 +53,11 @@
             {{/if}}
 
             <a class="logButton" href="/logout">LOG OUT</a>
-            
-        {{else}}
-<a class="logButton" href="/register">SIGN UP</a>
-<a class="logButton" href="/login">LOG IN</a>
-        {{/if}}
-        
+
+            {{else}}
+            <a class="logButton" href="/register">SIGN UP</a>
+            <a class="logButton" href="/login">LOG IN</a>
+            {{/if}}
+
         </div>
-</nav>
-</div>
 </nav>

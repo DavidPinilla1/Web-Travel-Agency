@@ -13,6 +13,15 @@
 </head>
 <body>
     {{>navbar}}
+    {{#if messages.info}}
+        <div class="messageInfo">{{messages.info}}</div>
+        {{/if}}
+    {{#if messages.error}}
+        <div class="messageError">{{messages.error}}</div>
+        {{/if}}
+    {{#if messages.warn}}
+        <div class="messageWarn">{{messages.warn}}</div>
+    {{/if}}
     {{{body}}}
     {{> footer}}
     
