@@ -12,11 +12,7 @@
     <title>{{title}}</title>
 </head>
 <body>
-    {{#unless user}}
     {{>navbar}}
-    {{else}}
-    {{>navbarLogged}}
-    {{/unless}}
     {{{body}}}
     {{> footer}}
     

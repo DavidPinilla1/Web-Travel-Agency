@@ -31,7 +31,7 @@ router.post('/signup', (req, res) => {
     }).save().then(user => res.status(201).send({
         message: 'user succesfully created, please confirm your email ',
         user
-    })).catch(err => send.res(err))
+    })).catch(err => res.send(err))
 });
 router.get('/confirmation/:token', (req, res) => {
     const email = jwt.verify(req.params.token, config.EMAIL_SECRET).user;
@@ -48,8 +48,7 @@ router.get('/confirmation/:token', (req, res) => {
                         title: 'Web Travel Agency',
                         destinations,
                         user,
-                        message: 'Congratulations! Your email account has been verified.',
-                        //     redirect:'/profile'
+                        message: 'Congratulations! Your email account has been verified.'
                     })
                 })
             })
@@ -68,7 +67,7 @@ router.post('/login', (req, res) => {
                 message: 'Email or password wrong'
             })
             req.login(userFound._id, err => {
-                res.redirect('/profile')
+                res.redirect('/')
             })
         }).catch(err => res.send(err))
     })
