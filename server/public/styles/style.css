@@ -555,13 +555,28 @@ footer p {
   background-color: #058fff;
 }
 
-.verifiedMessage {
-  position: absolute;
-  border-radius: 0.3em;
+.messageInfo {
+  text-align: center;
   font-weight: bold;
   padding: 0.4em;
   font-size: 1.4em;
   background-color: rgba(131, 255, 148, 0.384);
+}
+
+.messageWarn {
+  text-align: center;
+  font-weight: bold;
+  padding: 0.4em;
+  font-size: 1.4em;
+  background-color: rgba(255, 140, 8, 0.589);
+}
+
+.messageError {
+  text-align: center;
+  font-weight: bold;
+  padding: 0.4em;
+  font-size: 1.4em;
+  background-color: rgba(253, 0, 0, 0.384);
 }
 
 /*# sourceMappingURL=style.css.map */
