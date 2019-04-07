@@ -539,7 +539,7 @@ footer p {
     height: 3em;
   }
 }
-.user .logout {
+.user .logButton {
   all: unset;
   cursor: pointer;
   background-color: #6a91ff;
@@ -550,7 +550,7 @@ footer p {
   margin: 0.3em;
   transition: all ease-in-out 500ms;
 }
-.user .logout:hover {
+.user .logButton:hover {
   color: #002a5a;
   background-color: #058fff;
 }
