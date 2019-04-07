@@ -7,6 +7,7 @@ router.get('/', (req, res) => {
         res.render('index.hbs', {
             title: 'Travel Agency',
             destinations,
+            messages:req.flash('info'),
         });
     })
 });

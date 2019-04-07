@@ -28,27 +28,24 @@ router.post('/signup', (req, res) => {
         lastname: req.body.lastname,
         email: req.body.email,
         password: req.body.password
-    }).save().then(user => res.status(201).send({
-        message: 'user succesfully created, please confirm your email ',
-        user
-    })).catch(err => res.send(err))
+    }).save().then(user =>{
+        req.flash('info', 'user succesfully created, please confirm your email ');
+         res.redirect('/login')
+    }).catch(err => res.send(err))
 });
 router.get('/confirmation/:token', (req, res) => {
     const email = jwt.verify(req.params.token, config.EMAIL_SECRET).user;
-    User.findOne({
-        email
-    }).then(userFound => {
-        console.log('confirmation of ' + userFound.email)
+    User.findOne({ email }).then(userFound => {
         userFound.confirmed = true
         userFound.save().then(user => {
             console.log(userFound)
             req.login(userFound._id, err => {
                 Destinations.find({}).then(destinations => {
+                    req.flash('info', 'Congratulations! Your email account has been verified.');
                     res.render('index.hbs', {
                         title: 'Web Travel Agency',
                         destinations,
                         user,
-                        message: 'Congratulations! Your email account has been verified.'
                     })
                 })
             })
@@ -63,17 +60,19 @@ router.post('/login', (req, res) => {
             message: 'Email or password wrong'
         })
         bcrypt.compare(req.body.password, userFound.password).then(isMatch => {
-            if (!isMatch) return res.json({
-                message: 'Email or password wrong'
-            })
+            if (!isMatch){
+                req.flash('info','Email or password wrong');
+                res.redirect('/login');
+            }
             req.login(userFound._id, err => {
-                res.redirect('/')
+                res.redirect('/');
             })
         }).catch(err => res.send(err))
     })
 });
 router.get('/logout', (req, res) => {
     req.session.destroy();
+    req.flash('info','You have been sucessfully logged out');
     res.redirect('/');
 })
 passport.serializeUser(function (user_id, done) {

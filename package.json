@@ -14,7 +14,9 @@
   "license": "ISC",
   "dependencies": {
     "bcrypt": "^3.0.5",
+    "cookie-parser": "^1.4.4",
     "express": "^4.16.4",
+    "express-flash": "0.0.2",
     "express-session": "^1.15.6",
     "hbs": "^4.0.3",
     "hbs-utils": "0.0.4",
