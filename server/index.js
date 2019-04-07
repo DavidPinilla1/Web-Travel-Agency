@@ -11,8 +11,10 @@ const viewsRoutes = require('./routes/views')
 const morgan = require('morgan')
 const hbs = require('hbs')
 const hbsUtils = require('hbs-utils')(hbs);
+const cookieParser=require('cookie-parser')
 const session = require('express-session')
 const passport = require('passport')
+const flash=require('express-flash')
 hbs.registerPartials(`${__dirname}/views/partials`);
 hbsUtils.registerPartials(`${__dirname}/views/partials`);
 hbsUtils.registerWatchedPartials(`${__dirname}/views/partials`);
@@ -23,6 +25,7 @@ app.use(express.json());
 app.use(express.urlencoded({
   extended: false
 }));
+app.use(cookieParser());
 app.use(morgan('tiny'))
 app.use('/', express.static(path.join(__dirname, 'public')))
 app.use(session({
@@ -30,6 +33,7 @@ app.use(session({
   resave: false,
   saveUninitialized: true,
 }))
+app.use(flash())
 app.use(passport.initialize());
 app.use(passport.session());
 app.use((req,res,next)=>{
