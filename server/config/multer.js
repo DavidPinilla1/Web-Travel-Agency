@@ -3,7 +3,7 @@ const Multer = require( 'multer' );
 const multer = Multer(  {
     storage: Multer.diskStorage( {
         destination: ( req, file, callback ) => {
-            callback( null, './uploads/' );
+            callback( null, './server/public/uploads/images' );
         },
         filename: ( req, file, callback ) => {
             callback( null, file.originalname );
@@ -11,7 +11,7 @@ const multer = Multer(  {
     }),
     fileFilter: ( req, file, callback ) => {
 
-        if ( file.mimetype === 'image/png' || file.mimetype === 'image/jpg'||file.mimetype === 'image/jpeg' ) {
+        if ( file.mimetype === 'image/png' || file.mimetype === 'image/jpg'|| file.mimetype === 'image/jpeg' ) {
             callback(null , true)
         } else {
             callback( null, false )

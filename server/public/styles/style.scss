@@ -5,7 +5,6 @@
 body {
     font-family: Arial;
     line-height: 1.6;
-    background-repeat: no-repeat;
 }
 
 /* ----NAV---- */
@@ -16,11 +15,9 @@ nav {
     align-items: center;
     position: sticky;
     top: 0;
+    background-color: rgb(0, 17, 34);
     padding: 0.62em;
-    background-color: rgb(0, 70, 150);
     z-index: 70;
-    background-size: cover;
-    background-image: url('/images/nav.png');
 
     ul {
         display: flex;
@@ -95,8 +92,9 @@ header {
     align-items: center;
     color: white;
     padding: 2em;
-    background-size: 100vw;
+    background-repeat: no-repeat;
     background-image: url('/images/nathan-anderson-316188-unsplash.jpg');
+    background-size: cover;
 
     h1 {
         font-weight: bold;
@@ -204,8 +202,6 @@ header {
     height: 45vh;
     position: relative;
     transition: all ease-in-out 700ms;
-
-    &:hover {}
 
     p {
         font-size: 1.2rem;
