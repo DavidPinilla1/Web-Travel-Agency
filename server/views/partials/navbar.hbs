@@ -1,9 +1,10 @@
 <nav>
-    <div class="logo">
+   <a href="/"> <div class="logo">
         <img src="images/iconoweb.png" alt="logo">
         <p>Geekshubs <br>
             Travels </p>
     </div>
+    </a>
     <ul>
         <a href="#destinos">
             <li>Destinos </li>
@@ -35,22 +36,29 @@
         </div>
         <nav class="navbar navbar-dark bg-dark">
             <button class="navbar-toggler" type="button" data-toggle="collapse"
-                data-target="#navbarToggleExternalContent"
-                 aria-controls="navbarToggleExternalContent"
+                data-target="#navbarToggleExternalContent" aria-controls="navbarToggleExternalContent"
                 aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
             </button>
         </nav>
-    </div>
-    <div class="socialMedia">
-        <a href="https://twitter.com/geeks_academy" target="_blank"><img src="images/tt-ico.png" alt="Twitter"></a>
-        <a href="#"> <img src="images/ws-ico.png" alt="WhatsApp"></a>
-        <a href="https://www.facebook.com/geekshubsacademy/" target="_blank"><img src="images/fb-ico.png"
-                alt="Facebook"></a>
-        <a href="https://www.instagram.com/geekshubs/" target="_blank"><img src="images/Instagram.png"
-                alt="Instagram"></a>
-        <a href="https://www.linkedin.com/school/geekshubsacademy/" target="_blank"><img src="images/linkedIn.png"
-                alt="linkedIn"></a>
-        <a href="https://www.youtube.com/user/geekshubs" target="_blank"> <img src="images/YT.png" alt="Youtube"></a>
-    </div>
+        <div class="user">
+        {{#if isAuthenticated}}
+           <a href="/profile"> <img class="profilePicture" src="/images/profile.png" alt="profileImage">
+            <img class="edit" src="/images/edit.png" alt="edit" /></a>
+            {{#if name}}
+            <div class="userName"> {{user.name}}</div>
+            {{else}}
+            <div class="userEmail"> {{user.email}}</div>
+            {{/if}}
+
+            <a class="logButton" href="/logout">LOG OUT</a>
+            
+        {{else}}
+<a class="logButton" href="/register">SIGN UP</a>
+<a class="logButton" href="/login">LOG IN</a>
+        {{/if}}
+        
+        </div>
+</nav>
+</div>
 </nav>
