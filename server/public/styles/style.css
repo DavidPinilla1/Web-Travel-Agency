@@ -379,7 +379,8 @@ footer p {
   margin: 0 auto;
 }
 
-.bgregister, .bglogin {
+.bgregister,
+.bglogin {
   display: flex;
   flex-direction: row;
   justify-content: center;
@@ -408,15 +409,6 @@ footer p {
   padding: 1em;
   background-color: #0182fae8;
   transition: all ease-in-out 0.7s;
-}
-.register .passwordRule, .register .passwordRule2,
-.login .passwordRule,
-.login .passwordRule2 {
-  color: #a00000;
-  font-weight: bold;
-  font-style: italic;
-  display: none;
-  margin: -0.8em;
 }
 .register .terms,
 .login .terms {
@@ -483,6 +475,15 @@ footer p {
   margin-bottom: 1.5em;
 }
 
+.passwordRule,
+.passwordRule2 {
+  color: #a00000;
+  font-weight: bold;
+  font-style: italic;
+  display: none;
+  margin: -0.8em;
+}
+
 .pos-f-t {
   order: 1;
 }
@@ -511,9 +512,11 @@ footer p {
   }
 }
 .user .profilePicture {
+  position: relative;
   display: block;
   width: 5em;
   height: 5em;
+  border-radius: 50em;
 }
 @media (max-width: 768px) {
   .user .profilePicture {
@@ -526,6 +529,7 @@ footer p {
   position: absolute;
   width: 5em;
   height: 5em;
+  top: 0.9em;
   opacity: 0;
   z-index: 3;
   transition: all ease-in-out 500ms;
@@ -539,20 +543,72 @@ footer p {
     height: 3em;
   }
 }
-.user .logButton {
+
+.logButton {
   all: unset;
+  text-align: center;
   cursor: pointer;
   background-color: #6a91ff;
   color: #023a83;
   border-radius: 0.7em;
   font-weight: bold;
   padding: 0.7em;
-  margin: 0.3em;
+  margin: 0.8em;
   transition: all ease-in-out 500ms;
 }
-.user .logButton:hover {
-  color: #002a5a;
-  background-color: #058fff;
+.logButton:hover {
+  color: #60aaff;
+  background-color: #003866;
+}
+
+.bgProfile {
+  padding: 1.5em;
+  background-image: url("/images/profile.jpg");
+  background-size: cover;
+}
+
+.profile {
+  display: flex;
+  justify-content: space-around;
+  padding: 2em;
+  border-radius: 1.8em;
+  background-color: #40c3ffa6;
+}
+.profile div {
+  position: relative;
+  top: 0;
+}
+.profile .profileUser {
+  display: block;
+  cursor: pointer;
+  border-radius: 50em;
+  height: 25em;
+}
+.profile .edit {
+  cursor: pointer;
+  position: absolute;
+  top: 0;
+  border-radius: 50em;
+  opacity: 0;
+  height: 25em;
+  z-index: 3;
+  transition: all ease-in-out 500ms;
+}
+.profile .edit:hover {
+  opacity: 0.4;
+}
+.profile input {
+  all: unset;
+  padding: 1em;
+  margin: 1em;
+  font-weight: bold;
+  color: #b8f7ff;
+  border-radius: 0.5em;
+  background-color: #006effb0;
+}
+.profile .updateProfile {
+  display: flex;
+  flex-direction: column;
 }
 
 .messageInfo {
