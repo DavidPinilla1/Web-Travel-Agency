@@ -1,6 +1,24 @@
-<div class="profile">
-    this is your profile
-    <form action="" method="post">
-
-    </form>
+<div class="bgProfile">
+    <div class="profile">
+        <div class="profileImage">
+            <div>
+            <img class="profileUser"src="{{user.imagePath}}" alt="">
+            <img class="edit"src="/images/edit.png" alt="">
+            </div>
+            <h2>Profile created:<br></h2>
+            <h4> {{user.createdAt}}</h4>
+        </div>
+        <form class="updateProfile" method="POST" action="user/update" enctype="multipart/form-data">
+            <input type="file" hidden class="hiddenInput" name="image">
+            <input type="text" name="name" class="name" placeholder="add your name" value={{user.name}}>
+            <input type="text" name="lastname" class="lastname" placeholder="add your lastname" value={{user.lastname}}>
+            <input type="email" name="email" class="email" placeholder="Introduce your email*" required="true"
+                value={{user.email}}>
+            <input type="password" name="password" class="password" placeholder="Enter new password*" minlength="8" required>
+            <label class="passwordRule">Password must contain at least 8 characters.</label>
+            <input type="password" name="passwordConfirm" required class="passwordConfirm" placeholder="Confirm new password*" oninput="check(this)">
+            <label class="passwordRule2">Both password should match.</label>
+            <button type="submit" class="logButton" value="Submit"> SAVE CHANGES</button>
+        </form>
+    </div>
 </div>
