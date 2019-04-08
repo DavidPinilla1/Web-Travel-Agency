@@ -44,13 +44,8 @@
         </nav>
         <div class="user">
             {{#if isAuthenticated}}
-            <a href="/profile"> <img class="profilePicture" src="/images/profile.png" alt="profileImage">
+            <a href="/profile" > <img class="profilePicture" src={{user.imagePath}} >
                 <img class="edit" src="/images/edit.png" alt="edit" /></a>
-            {{#if name}}
-            <div class="userName"> {{user.name}}</div>
-            {{else}}
-            <div class="userEmail"> {{user.email}}</div>
-            {{/if}}
 
             <a class="logButton" href="/logout">LOG OUT</a>
 

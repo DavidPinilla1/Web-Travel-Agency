@@ -2,3 +2,4 @@
 *.log
 **/server/public/components
 */config/password.js
+**/server/public/images/users
