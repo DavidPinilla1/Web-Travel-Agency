@@ -54,10 +54,6 @@ router.post('/login', (req, res) => {
             req.flash('error','Email or password wrong');
             return res.redirect('/login');
         }
-        if(!userFound.confirmed) {
-            req.flash('warn','You should confirm your email to log in');
-            return  res.redirect('/login');
-        }
         bcrypt.compare(req.body.password, userFound.password).then(isMatch => {
             if (!isMatch){
                 req.flash('error','Email or password wrong');
